@@ -1,0 +1,55 @@
+{
+  "name": "rollup-start-kit",
+  "version": "1.0.0",
+  "description": "rollup template to build lib",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zadzbw/rollup-start-kit.git"
+  },
+  "keywords": [
+    "rollup",
+    "template"
+  ],
+  "author": "zadzbw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zadzbw/rollup-start-kit/issues"
+  },
+  "homepage": "https://github.com/zadzbw/rollup-start-kit#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commitmsg": "commitlint -E GIT_PARAMS",
+    "precommit": "lint-staged",
+    "lint": "eslint src/*.js --format codeframe --env mocha",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier-eslint \"src/*.js\" --write",
+    "build": "node rollup.build.js"
+  },
+  "lint-staged": {
+    "src*/*.js": [
+      "npm run format",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.1.1",
+    "@commitlint/config-conventional": "^7.1.1",
+    "chalk": "^2.4.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "ora": "^3.0.0",
+    "prettier-eslint-cli": "^4.7.1",
+    "rollup": "^0.65.0",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "uglify-js": "^3.4.8"
+  }
+}
