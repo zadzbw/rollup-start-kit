@@ -2,7 +2,8 @@
   "name": "rollup-start-kit",
   "version": "1.0.0",
   "description": "rollup template to build lib",
-  "main": "index.js",
+  "main": "dist/zad.cjs.js",
+  "module": "dist/zad.esm.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zadzbw/rollup-start-kit.git"
@@ -32,12 +33,15 @@
       "git add"
     ]
   },
+  "dependencies": {
+    "lodash": "^4.17.10"
+  },
   "devDependencies": {
     "@commitlint/cli": "^7.1.1",
     "@commitlint/config-conventional": "^7.1.1",
     "chalk": "^2.4.1",
     "cz-conventional-changelog": "^2.1.0",
-    "eslint": "^5.4.0",
+    "eslint": "^5.5.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "husky": "^0.14.3",

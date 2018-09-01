@@ -15,8 +15,8 @@ const banner = `/**
  * homepage: ${homepage}
  */`;
 
-const externals = [];
-// const externals = ['lodash'];
+// 外部直接依赖的库
+const externals = ['lodash'];
 
 const configs = {
   'umd-dev': {

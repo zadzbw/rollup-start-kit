@@ -1,3 +1,5 @@
+import _head from 'lodash/head';
+import _tail from 'lodash/tail';
 import { getQueryString } from './utils/qs';
 
 class Zad {
@@ -11,6 +13,14 @@ class Zad {
 
   getPath() {
     return getQueryString('host', { name: this.name });
+  }
+
+  head() {
+    return _head([this.name, 1, 2, 3]);
+  }
+
+  tail() {
+    return _tail([this.name, 1, 2, 3]);
   }
 }
 
